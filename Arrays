@@ -1,0 +1,17 @@
+Problem 1
+link : https://leetcode.com/problems/set-matrix-zeroes/
+
+Doing this sum in constant space is important
+* One of my idea was to make the values present in the row and cloumn of zero to some temp value
+later all the temp values must be made to zero
+
+But what can be the value of temp.
+Since if a value is equal to temp and there is no zero in it's colums or row then we would unnecessarly make it zero
+
+So we have an idea of making 
+if(matrix[i][j]==0)
+    matrix[0][j]=0
+    matrix[i][0]=0
+    
+they would have the same meaning right but check for the new position place if it is non zero then we are including extra case.
+     
